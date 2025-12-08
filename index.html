@@ -1,129 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Psalm Daily</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;500&display=swap');
-
-  :root {
-    --bg: #faf9f7;
-    --text: #222;
-    --accent: #8b7355;
-  }
-
-  body {
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-  }
-
-  main {
-    max-width: 560px;
-    padding: 2rem;
-  }
-
-  h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 2.2rem;
-    margin: 0 0 1.5rem;
-    color: var(--accent);
-  }
-
-  .artwork {
-    margin: 2rem 0;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .artwork img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .info {
-    font-size: 1.1rem;
-    margin: 1.5rem 0;
-    color: #555;
-  }
-
-  .number {
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: var(--accent);
-  }
-
-  footer {
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #888;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #111;
-      --text: #eee;
-      --accent: #d4a574;
-    }
-    body { background: var(--bg); color: var(--text); }
-    .artwork { box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Psalms and Meditations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 <main>
-  <h1>Psalm Daily</h1>
-  
-  <div class="artwork" id="daily-art"></div>
-  
-  <div class="info">
-    Today <span id="date-today"></span> — 
-    Artwork <span class="number" id="art-number"></span> / 171
+  <h1>PSALMS AND MEDITATIONS</h1>
+
+    <div class="info">
+    <span id="date-today"></span> — 
+    Psalm <span id="art-number"></span>
   </div>
 
+  <div class="artwork" id="daily-art"></div>
+
+
+
+  <p>
+    <em>“A man cannot lose either the past or the future: for what a man has not, how can anyone take this from him?”</em>
+    <br><br>
+    Marcus Aurelius, Meditations, Book II, Verse 14
+  </p>
+  <p>
+    When two principles oppose each other, there must be a third which encapsulates both in one whole. This third principle gives context to the other two and distinguishes them from each other. In the case of time, past and future are not only ideas in themselves, they are also two ways of experiencing the present. It is only through the present that the future can be altered and the past written, because it is the only moment in time when we can act. It is at this moment that all our living must take place.
+  </p>
+  <p>
+    The Book of Psalms operates in a similar way. Psalms are often placed into two categories: sorrow and praise. However, rather than being two distinct groups, they are a spectrum from sorrow to praise, and somewhere between them is a point where sorrow becomes praise, and supplication becomes commitment. At this point, sorrow and praise operate together, both encapsulated in the idea of faith.
+  </p>
+  <p>
+    To create this artwork, I categorized each psalm, arranging them along two axes. The horizontal axis represents the shift from sorrow to praise and the vertical axis represents the shift from supplication to commitment. I created symbols to capture the central idea of each psalm, but the diagram is meant to be understood as a whole, not as a collection of individual tiles. Somewhere between past and future, sorrow and praise, supplication and commitment is the moment when all meet in a single act of devotion to God, a complete expression of faith.
+  </p>
+
   <footer>
-    One of 171 small works • New piece every day • Returns in new order each year
+    © 2025 - Kaleb Farar
   </footer>
 </main>
 
-<script>
-// ——— Psalm Daily – updated for psalm_000.jpg naming ———
-const imgFolder = "psalm_assets/";
-
-// Helper: get day-of-year (1 = Jan 1)
-function getDayOfYear(d = new Date()) {
-  const start = new Date(d.getFullYear(), 0, 0);
-  const diff = d - start;
-  const oneDay = 86400000;
-  return Math.floor(diff / oneDay); // 1–366
-}
-
-const today = new Date();
-const dayOfYear = getDayOfYear(today);
-const year = today.getFullYear();
-
-// Magic line – same perfect shuffling every year
-const index = (dayOfYear - 1 + year * 23) % 171; // 0–170
-
-// Display number (001–171)
-document.getElementById("art-number").textContent = (index + 1).toString().padStart(3, "0");
-document.getElementById("date-today").textContent = today.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
-
-// THIS IS THE ONLY LINE THAT CHANGED
-const img = document.createElement("img");
-img.src = `${imgFolder}psalm_${String(index).padStart(3, "0")}.jpg`;  // ← now uses psalm_000.jpg format
-img.alt = `Psalm artwork ${index + 1}`;
-img.loading = "lazy";
-document.getElementById("daily-art").appendChild(img);
-</script>
+<script src="script.js"></script>
 </body>
 </html>

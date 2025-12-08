@@ -1,0 +1,71 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;500&family=Source+Code+Pro:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #faf9f7;
+  --text: #222;
+  --accent: #8b7355;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+main {
+  max-width: 560px;
+  padding: 2rem;
+}
+
+h1 {
+  /* Updated to Source Code Pro */
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-weight: 600;           /* looks great at medium-bold */
+  font-size: 4rem;          /* slightly larger to suit the monospaced style */
+  letter-spacing: -0.03em;     /* optional: gives it a refined look */
+  margin: 0 0 1.5rem;
+  color: var(--accent);
+  text-transform: uppercase;  /* optional but very common with Source Code Pro titles */
+}
+
+.artwork {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.artwork img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  color: #555;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+    --text: #eee;
+    --accent: #d4a574;
+  }
+  body { background: var(--bg); color: var(--text); }
+  .artwork { box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+}
