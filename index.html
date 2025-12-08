@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psalm Daily</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;500&display=swap');
+
+  :root {
+    --bg: #faf9f7;
+    --text: #222;
+    --accent: #8b7355;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+  }
+
+  main {
+    max-width: 560px;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.2rem;
+    margin: 0 0 1.5rem;
+    color: var(--accent);
+  }
+
+  .artwork {
+    margin: 2rem 0;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .artwork img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .info {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    color: #555;
+  }
+
+  .number {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--accent);
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111;
+      --text: #eee;
+      --accent: #d4a574;
+    }
+    body { background: var(--bg); color: var(--text); }
+    .artwork { box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+  }
+</style>
+</head>
+
+<body>
+<main>
+  <h1>Psalm Daily</h1>
+  
+  <div class="artwork" id="daily-art"></div>
+  
+  <div class="info">
+    Today <span id="date-today"></span> — 
+    Artwork <span class="number" id="art-number"></span> / 171
+  </div>
+
+  <footer>
+    One of 171 small works • New piece every day • Returns in new order each year
+  </footer>
+</main>
+
+<script>
+// ——— Psalm Daily – single-file version ———
+const imgFolder = "psalm_assets/";
+
+// Helper: get day-of-year (1 = Jan 1)
+function getDayOfYear(d = new Date()) {
+  const start = new Date(d.getFullYear(), 0, 0);
+  const diff = d - start;
+  const oneDay = 86400000;
+  return Math.floor(diff / oneDay); // 1–366
+}
+
+const today = new Date();
+const dayOfYear = getDayOfYear(today); // starts at 1
+const year = today.getFullYear();
+
+// This is the magic line – works forever, including leap years!
+const index = (dayOfYear - 1 + year * 23) % 171; // 0–170
+
+// Display
+document.getElementById("art-number").textContent = (index + 1).toString().padStart(3, "0");
+document.getElementById("date-today").textContent = today.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+
+const img = document.createElement("img");
+img.src = `${imgFolder}${String(index).padStart(3, "0")}.jpg`;
+img.alt = `Psalm artwork ${index + 1}`;
+img.loading = "lazy";
+document.getElementById("daily-art").appendChild(img);
+</script>
+</body>
+</html>
