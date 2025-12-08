@@ -1,5 +1,5 @@
-/* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;500&family=Source+Code+Pro:wght@400;600;700&display=swap');
+/* styles.css – now with Library of Babel fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Calligraffitti&display=swap');
 
 :root {
   --bg: #faf9f7;
@@ -14,8 +14,10 @@ body {
   place-items: center;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Crimson Text', Georgia, serif;   /* ← elegant book serif */
   text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 
 main {
@@ -24,14 +26,20 @@ main {
 }
 
 h1 {
-  /* Updated to Source Code Pro */
-  font-family: 'Source Code Pro', 'Courier New', monospace;
-  font-weight: 600;           /* looks great at medium-bold */
-  font-size: 4rem;          /* slightly larger to suit the monospaced style */
-  letter-spacing: -0.03em;     /* optional: gives it a refined look */
+  font-family: 'Crimson Text', Georgia, serif;   /* ← same classical serif as the rest */
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: -0.02em;
   margin: 0 0 1.5rem;
   color: var(--accent);
-  text-transform: uppercase;  /* optional but very common with Source Code Pro titles */
+  text-transform: uppercase;
+}
+
+.info .number,
+#art-number {
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  color: var(--accent);
 }
 
 .artwork {
@@ -40,6 +48,7 @@ h1 {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .artwork img {
@@ -51,7 +60,7 @@ h1 {
 .info {
   font-size: 1.1rem;
   margin: 1.5rem 0;
-  color: #555;
+  color: var(--accent);
 }
 
 footer {
