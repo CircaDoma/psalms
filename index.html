@@ -96,7 +96,7 @@
 </main>
 
 <script>
-// ——— Psalm Daily – single-file version ———
+// ——— Psalm Daily – updated for psalm_000.jpg naming ———
 const imgFolder = "psalm_assets/";
 
 // Helper: get day-of-year (1 = Jan 1)
@@ -108,18 +108,19 @@ function getDayOfYear(d = new Date()) {
 }
 
 const today = new Date();
-const dayOfYear = getDayOfYear(today); // starts at 1
+const dayOfYear = getDayOfYear(today);
 const year = today.getFullYear();
 
-// This is the magic line – works forever, including leap years!
+// Magic line – same perfect shuffling every year
 const index = (dayOfYear - 1 + year * 23) % 171; // 0–170
 
-// Display
+// Display number (001–171)
 document.getElementById("art-number").textContent = (index + 1).toString().padStart(3, "0");
 document.getElementById("date-today").textContent = today.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
 
+// THIS IS THE ONLY LINE THAT CHANGED
 const img = document.createElement("img");
-img.src = `${imgFolder}${String(index).padStart(3, "0")}.jpg`;
+img.src = `${imgFolder}psalm_${String(index).padStart(3, "0")}.jpg`;  // ← now uses psalm_000.jpg format
 img.alt = `Psalm artwork ${index + 1}`;
 img.loading = "lazy";
 document.getElementById("daily-art").appendChild(img);
