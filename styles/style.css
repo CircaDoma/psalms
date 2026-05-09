@@ -16,6 +16,7 @@
 img {
     display: block;
     max-width: 100%;
+    -webkit-user-drag: none;
 }
 
 button {
@@ -46,7 +47,6 @@ html {
 
 
 
-    --text-sm: 1.2rem;    /* 12px */
     --text-base: 1.6rem;      /* 16px */
     --text-lg: 2.0rem;     /* 20px */
     --text-xl: 2.6rem;      /* 26px */
@@ -76,6 +76,7 @@ body {
     color: var(--color-black);
     background-color: var(--color-gray);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 main {
@@ -84,12 +85,17 @@ main {
 
 .home-link {
     margin: 0 auto;
+    transition: color 0.2s ease-in-out;
 }
 
 .home-link .home {
     display: block;
     text-decoration: none;
     color: inherit;
+}
+
+.home-link:hover {
+    color: var(--color-white);
 }
 
 .home-link .home .container {
@@ -114,6 +120,18 @@ main {
 
 .hero {
     margin-top: var(--space-lg);
+    display: flex;
+    align-items: center;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero img {
+    height: 20vw;
 }
 
 .hero .divider {
@@ -160,6 +178,11 @@ main {
     color: inherit;
     vertical-align: center;
     width: 100%;
+    transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+    color: var(--color-white);
 }
 
 .navLink img {
@@ -175,12 +198,37 @@ main {
 }
 
 .navbar .flavorText {
+    position: relative;
     font-family: var(--font-hebrew);
     flex: 1;
     text-transform: uppercase;
     text-align: center;
     font-size: var(--text-xl);
     font-weight: 300;
+    transition: color 0.2s ease-in-out;
+}
+
+.flavorText:hover {
+    color: transparent;
+}
+
+.flavorText::after {
+    content: 'To you I lift my eyes';
+    font-family: var(--font-english);
+    font-size: var(--text-lg);
+    font-weight: 300;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--color-white);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.navbar .flavorText:hover::after {
+    opacity: 1;
 }
 
 .footer {
@@ -193,7 +241,7 @@ main {
 }
 
 .footer .divider {
-    font-family: var(--font-heading);
+    font-family: var(--font-english);
     line-height: 1.2;
     font-size: var(--text-lg);
     font-weight: 300;
@@ -207,3 +255,19 @@ main {
 .footer img {
     width: var(--space-m);
 }
+
+
+/* ABOUT PAGE SPECIFICS */
+
+.textContent {
+    font-size: var(--text-base);
+    font-family: var(--font-english);
+    font-weight: 300;
+    margin-top: var(--space-lg);
+}
+
+.textContent .container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
