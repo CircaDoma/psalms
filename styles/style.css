@@ -271,3 +271,6 @@ main {
     margin-right: 5%;
 }
 
+.textContent .container p {
+    margin-bottom: 2rem;
+}
