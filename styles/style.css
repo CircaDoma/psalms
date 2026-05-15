@@ -32,6 +32,7 @@ button {
 
 html {
     font-size: 62.5%; /* This makes 1rem = 10px */
+    overscroll-behavior: none;
 }
 
 :root {
@@ -75,6 +76,8 @@ body {
     font-size: var(--text-base);
     color: var(--color-black);
     background-color: var(--color-gray);
+
+
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -83,6 +86,12 @@ main {
     margin: var(--space-s) var(--space-lg) var(--space-s) var(--space-lg);
 }
 
+::selection {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+/* HOME PAGE AND GLOBAL STYLES */
 .home-link {
     margin: 0 auto;
     transition: color 0.2s ease-in-out;
@@ -128,6 +137,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
 .hero img {
@@ -135,6 +145,7 @@ main {
 }
 
 .hero .divider {
+    width: 100%;
     margin-top: var(--space-lg);
     font-family: var(--font-heading);
     line-height: 1.2;
@@ -208,29 +219,6 @@ main {
     transition: color 0.2s ease-in-out;
 }
 
-.flavorText:hover {
-    color: transparent;
-}
-
-.flavorText::after {
-    content: 'To you I lift my eyes';
-    font-family: var(--font-english);
-    font-size: var(--text-lg);
-    font-weight: 300;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: var(--color-white);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.navbar .flavorText:hover::after {
-    opacity: 1;
-}
-
 .footer {
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
@@ -295,12 +283,12 @@ main {
     width: 50px;
     height: 50px;
     background-color: var(--color-black);
-    transition: background-color 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: inherit;
+    transition: background-color 1.5s ease-out, color 1.5s ease-out;
 }
 
 .psalm-link--english {
@@ -317,10 +305,66 @@ main {
 
 .psalm-link:hover {
     background-color: var(--color-white);
-    transition: background-color 0.05s ease-in-out;
+    transition: background-color 0.1s ease-in, color 0.1s ease-in;
 }
 
 .psalm-link:visited:hover {
     background-color: var(--color-red);
     color: var(--color-white);
+    opacity: 1;
+}
+
+/* PSALM PAGE SPECIFICS */
+
+.psalm-graphic {
+    image-rendering: pixelated;
+    width: 20vw;
+}
+
+.psalmNumber {
+    width: 100%;
+    margin-top: var(--space-lg);
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    color: var(--color-red);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.psalmNumber::before,
+.psalmNumber::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: var(--color-black);
+}
+
+.psalmContent {
+    font-size: var(--text-base);
+    font-family: var(--font-english);
+    font-weight: 300;
+    margin-top: var(--space-lg);
+}
+
+.psalmContent .container {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.psalmContent .container p {
+    margin-bottom: 2rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.psalmContent .container .psalm-superscription {
+    font-style: italic;
+}
+
+.psalmContent .container .verse-number {
+    font-weight: 800;
 }
