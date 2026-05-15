@@ -295,10 +295,32 @@ main {
     width: 50px;
     height: 50px;
     background-color: var(--color-black);
-    transition: background-color 1.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.psalm-link--english {
+    font-family: var(--font-english);
+    font-size: var(--text-lg);
+    font-weight: 300;
+}
+
+.psalm-link--hebrew {
+    font-family: var(--font-hebrew);
+    font-size: var(--text-xl);
+    font-weight: 300;
 }
 
 .psalm-link:hover {
     background-color: var(--color-white);
     transition: background-color 0.05s ease-in-out;
+}
+
+.psalm-link:visited:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
 }
