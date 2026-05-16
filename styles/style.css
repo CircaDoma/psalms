@@ -305,6 +305,7 @@ main {
 
 .psalm-link:hover {
     background-color: var(--color-white);
+    color: var(--color-white);
     transition: background-color 0.1s ease-in, color 0.1s ease-in;
 }
 
