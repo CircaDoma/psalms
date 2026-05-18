@@ -36,15 +36,16 @@
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
-      const num = parseInt(params.get('psalm'), 10);
+      const raw = params.get('psalm');
+      const num = isNaN(raw) ? raw : parseInt(raw, 10);
 
       const numEl = document.querySelector('.psalmNumber');
-      if (numEl) numEl.textContent = num;
+      if (numEl) numEl.textContent = typeof num === 'string' ? num.split('-')[0] : num;
 
       const imgEl = document.querySelector('.psalm-graphic');
       if (imgEl) imgEl.src = `assets/psalms/${num}.png`;
 
-      document.title = `Selah - Psalm ${num}`;
+      document.title = typeof num === 'string' ? `Selah - Psalm ${num.split('-')[0]}` : `Selah - Psalm ${num}`;
 
       const contentEl = document.querySelector('.psalmContent .container');
       if (contentEl && psalms[num] !== undefined) {

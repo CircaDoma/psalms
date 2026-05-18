@@ -38,31 +38,58 @@
     </div>
   </main>
   <script>
-    const psalmOrder = [55, 73, 81, 103, 25, 31, 50, 131, 1, 115, 30, 127, 2, 9, 20, 136, 147, 150, 74, 77, 71, 66, 43, 78, 67, 63, 114, 101, 42, 34, 121, 15, 125, 23, 134, 145, 148, 80, 69, 75, 76, 83, 72, 68, 85, 62, 52, 91, 99, 40, 33, 117, 122, 128, 21, 135, 60, 82, 72, 79, 65, 84, 58, 41, 124, 133, 95, 49, 47, 104, 113, 24, 19, 138, 102, 90, 64, 56, 35, 14, 87, 107, 126, 11, 139, 53, 32, 149, 46, 111, 37, 8, 146, 38, 51, 88, 109, 120, 140, 27, 94, 116, 26, 110, 59, 96, 112, 108, 48, 45, 29, 18, 130, 22, 44, 28, 12, 141, 129, 36, 10, 5, 17, 86, 57, 4, 7, 56, 97, 100, 105, 143, 137, 123, 54, 'ד','ט','כ','נ','צ','ש','ס','מ','ת','ז','ב', 89, 61, 92, 144, 6, 142, 16, 39, 'א','ג','ו','י','ע','פ','ר','ח','ק','ל','ה', 106, 98, 132, 3]
+    const hebrewMap = {
+      'א': '119-aleph',
+      'ב': '119-beth',
+      'ג': '119-gimel',
+      'ד': '119-daleth',
+      'ה': '119-he',
+      'ו': '119-vau',
+      'ז': '119-zain',
+      'ח': '119-cheth',
+      'ט': '119-teth',
+      'י': '119-jod',
+      'כ': '119-caph',
+      'ל': '119-lamed',
+      'מ': '119-mem',
+      'נ': '119-nun',
+      'ס': '119-samech',
+      'ע': '119-ain',
+      'פ': '119-pe',
+      'צ': '119-tzaddi',
+      'ק': '119-koph',
+      'ר': '119-resh',
+      'ש': '119-schin',
+      'ת': '119-tau',
+    };
+
+    const psalmOrder = [55, 73, 81, 103, 25, 31, 50, 131, 1, 115, 30, 127, 2, 9, 20, 136, 147, 150, 74, 77, 71, 66, 43, 78, 67, 63, 114, 101, 42, 34, 121, 15, 125, 23, 134, 145, 148, 80, 69, 75, 76, 83, 72, 68, 85, 62, 52, 91, 99, 40, 33, 117, 122, 128, 21, 135, 60, 82, 72, 79, 65, 84, 58, 41, 124, 133, 95, 49, 47, 104, 113, 24, 19, 138, 102, 90, 64, 56, 35, 14, 87, 107, 126, 11, 139, 53, 32, 149, 46, 111, 37, 8, 146, 38, 51, 88, 109, 120, 140, 27, 94, 116, 26, 110, 59, 96, 112, 108, 48, 45, 29, 18, 130, 22, 44, 28, 12, 141, 129, 36, 10, 5, 17, 86, 57, 4, 7, 56, 97, 100, 105, 143, 137, 123, 54, 'ד','ט','כ','נ','צ','ש','ס','מ','ת','ז','ב', 89, 61, 92, 144, 6, 142, 16, 39, 'א','ג','ו','י','ע','פ','ר','ח','ק','ל','ה', 106, 98, 132, 3];
+
     const container = document.querySelector('.grid .container');
     let index = 0;
 
-    for (let row = 0; row < 9; row ++) {
-        const rowElement = document.createElement('div');
-        rowElement.className = 'psalm-row';
-        for (let column = 0; column < 19; column++) {
-            const psalm = psalmOrder[index++];
-            const a = document.createElement('a');
-            a.href = `psalm.html?psalm=${psalm}`;
-            a.className = 'psalm-link';
-            a.textContent = psalm;
+    for (let row = 0; row < 9; row++) {
+      const rowElement = document.createElement('div');
+      rowElement.className = 'psalm-row';
+      for (let column = 0; column < 19; column++) {
+        const psalm = psalmOrder[index++];
+        const a = document.createElement('a');
+        a.className = 'psalm-link';
 
-            if (typeof psalm === 'string') {
-                a.classList.add('psalm-link--hebrew');
-            } else {
-                a.classList.add('psalm-link--english');
-            }
-
-            rowElement.appendChild(a);
+        if (typeof psalm === 'string') {
+          a.classList.add('psalm-link--hebrew');
+          a.textContent = psalm;
+          a.href = `psalm.html?psalm=${hebrewMap[psalm]}`;
+        } else {
+          a.classList.add('psalm-link--english');
+          a.textContent = psalm;
+          a.href = `psalm.html?psalm=${psalm}`;
         }
-        container.appendChild(rowElement);
-    }
 
+        rowElement.appendChild(a);
+      }
+      container.appendChild(rowElement);
+    }
   </script>
 </body>
 </html>

@@ -2259,7 +2259,7 @@ const psalms = {
 		<p><span class="verse-number">28</span> Thou art my God, and I will praise thee: thou art my God, I will exalt thee.</p>
 		<p><span class="verse-number">29</span> O give thanks unto the Lord; for he is good: for his mercy endureth for ever.</p>
         `,
-    '199-alef': `
+    '119-alef': `
         <p><span class="verse-number">1</span> Blessed are the undefiled in the way, who walk in the law of the Lord.</p>
 		<p><span class="verse-number">2</span> Blessed are they that keep his testimonies, and that seek him with the whole heart.</p>
 		<p><span class="verse-number">3</span> They also do no iniquity: they walk in his ways.</p>
@@ -2269,7 +2269,7 @@ const psalms = {
 		<p><span class="verse-number">7</span> I will praise thee with uprightness of heart, when I shall have learned thy righteous judgments.</p>
 		<p><span class="verse-number">8</span> I will keep thy statutes: O forsake me not utterly.</p>
         `,
-    '199-beth': `
+    '119-beth': `
         <p><span class="verse-number">9</span> Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word.</p>
 		<p><span class="verse-number">10</span> With my whole heart have I sought thee: O let me not wander from thy commandments.</p>
 		<p><span class="verse-number">11</span> Thy word have I hid in mine heart, that I might not sin against thee.</p>
@@ -2279,7 +2279,7 @@ const psalms = {
 		<p><span class="verse-number">15</span> I will meditate in thy precepts, and have respect unto thy ways.</p>
 		<p><span class="verse-number">16</span> I will delight myself in thy statutes: I will not forget thy word.</p>
         `,
-    '199-gimel': `
+    '119-gimel': `
         <p><span class="verse-number">17</span> Deal bountifully with thy servant, that I may live, and keep thy word.</p>
 		<p><span class="verse-number">18</span> Open thou mine eyes, that I may behold wondrous things out of thy law.</p>
 		<p><span class="verse-number">19</span> I am a stranger in the earth: hide not thy commandments from me.</p>
@@ -2289,7 +2289,7 @@ const psalms = {
 		<p><span class="verse-number">23</span> Princes also did sit and speak against me: but thy servant did meditate in thy statutes.</p>
 		<p><span class="verse-number">24</span> Thy testimonies also are my delight and my counsellors.</p>
         `,
-    '199-daleth': `
+    '119-daleth': `
         <p><span class="verse-number">25</span> My soul cleaveth unto the dust: quicken thou me according to thy word.</p>
 		<p><span class="verse-number">26</span> I have declared my ways, and thou heardest me: teach me thy statutes.</p>
 		<p><span class="verse-number">27</span> Make me to understand the way of thy precepts: so shall I talk of thy wondrous works.</p>
@@ -2299,7 +2299,7 @@ const psalms = {
 		<p><span class="verse-number">31</span> I have stuck unto thy testimonies: O Lord, put me not to shame.</p>
 		<p><span class="verse-number">32</span> I will run the way of thy commandments, when thou shalt enlarge my heart.</p>
         `,
-    '199-he': `
+    '119-he': `
         <p><span class="verse-number">33</span> Teach me, O Lord, the way of thy statutes; and I shall keep it unto the end.</p>
 		<p><span class="verse-number">34</span> Give me understanding, and I shall keep thy law; yea, I shall observe it with my whole heart.</p>
 		<p><span class="verse-number">35</span> Make me to go in the path of thy commandments; for therein do I delight.</p>
@@ -2309,7 +2309,7 @@ const psalms = {
 		<p><span class="verse-number">39</span> Turn away my reproach which I fear: for thy judgments are good.</p>
 		<p><span class="verse-number">40</span> Behold, I have longed after thy precepts: quicken me in thy righteousness.</p>
         `,
-    '199-vau': `
+    '119-vau': `
         <p><span class="verse-number">41</span> Let thy mercies come also unto me, O Lord, even thy salvation, according to thy word.</p>
 		<p><span class="verse-number">42</span> So shall I have wherewith to answer him that reproacheth me: for I trust in thy word.</p>
 		<p><span class="verse-number">43</span> And take not the word of truth utterly out of my mouth; for I have hoped in thy judgments.</p>
@@ -2319,7 +2319,7 @@ const psalms = {
 		<p><span class="verse-number">47</span> And I will delight myself in thy commandments, which I have loved.</p>
 		<p><span class="verse-number">48</span> My hands also will I lift up unto thy commandments, which I have loved; and I will meditate in thy statutes.</p>
         `,
-    '199-zain': `
+    '119-zain': `
         <p><span class="verse-number">49</span> Remember the word unto thy servant, upon which thou hast caused me to hope.</p>
 		<p><span class="verse-number">50</span> This is my comfort in my affliction: for thy word hath quickened me.</p>
 		<p><span class="verse-number">51</span> The proud have had me greatly in derision: yet have I not declined from thy law.</p>
@@ -2329,7 +2329,7 @@ const psalms = {
 		<p><span class="verse-number">55</span> I have remembered thy name, O Lord, in the night, and have kept thy law.</p>
 		<p><span class="verse-number">56</span> This I had, because I kept thy precepts.</p>
         `,
-    '199-cheth': `
+    '119-cheth': `
         <p><span class="verse-number">57</span> Thou art my portion, O Lord: I have said that I would keep thy words.</p>
 		<p><span class="verse-number">58</span> I entreated thy favour with my whole heart: be merciful unto me according to thy word.</p>
 		<p><span class="verse-number">59</span> I thought on my ways, and turned my feet unto thy testimonies.</p>
@@ -2339,7 +2339,7 @@ const psalms = {
 		<p><span class="verse-number">63</span> I am a companion of all them that fear thee, and of them that keep thy precepts.</p>
 		<p><span class="verse-number">64</span> The earth, O Lord, is full of thy mercy: teach me thy statutes.</p>
         `,
-    '199-teth': `
+    '119-teth': `
         <p><span class="verse-number">65</span> Thou hast dealt well with thy servant, O Lord, according unto thy word.</p>
 		<p><span class="verse-number">66</span> Teach me good judgment and knowledge: for I have believed thy commandments.</p>
 		<p><span class="verse-number">67</span> Before I was afflicted I went astray: but now have I kept thy word.</p>
@@ -2349,7 +2349,7 @@ const psalms = {
 		<p><span class="verse-number">71</span> It is good for me that I have been afflicted; that I might learn thy statutes.</p>
 		<p><span class="verse-number">72</span> The law of thy mouth is better unto me than thousands of gold and silver.</p>
         `,
-    '199-jod': `
+    '119-jod': `
         <p><span class="verse-number">73</span> Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments.</p>
 		<p><span class="verse-number">74</span> They that fear thee will be glad when they see me; because I have hoped in thy word.</p>
 		<p><span class="verse-number">75</span> I know, O Lord, that thy judgments are right, and that thou in faithfulness hast afflicted me.</p>
@@ -2359,7 +2359,7 @@ const psalms = {
 		<p><span class="verse-number">79</span> Let those that fear thee turn unto me, and those that have known thy testimonies.</p>
 		<p><span class="verse-number">80</span> Let my heart be sound in thy statutes; that I be not ashamed.</p>
         `,
-    '199-caph': `
+    '119-caph': `
         <p><span class="verse-number">81</span> My soul fainteth for thy salvation: but I hope in thy word.</p>
 		<p><span class="verse-number">82</span> Mine eyes fail for thy word, saying, When wilt thou comfort me?</p>
 		<p><span class="verse-number">83</span> For I am become like a bottle in the smoke; yet do I not forget thy statutes.</p>
@@ -2369,7 +2369,7 @@ const psalms = {
 		<p><span class="verse-number">87</span> They had almost consumed me upon earth; but I forsook not thy precepts.</p>
 		<p><span class="verse-number">88</span> Quicken me after thy lovingkindness; so shall I keep the testimony of thy mouth.</p>
         `,
-    '199-lamed': `
+    '119-lamed': `
         <p><span class="verse-number">89</span> For ever, O Lord, thy word is settled in heaven.</p>
 		<p><span class="verse-number">90</span> Thy faithfulness is unto all generations: thou hast established the earth, and it abideth.</p>
 		<p><span class="verse-number">91</span> They continue this day according to thine ordinances: for all are thy servants.</p>
@@ -2379,7 +2379,7 @@ const psalms = {
 		<p><span class="verse-number">95</span> The wicked have waited for me to destroy me: but I will consider thy testimonies.</p>
 		<p><span class="verse-number">96</span> I have seen an end of all perfection: but thy commandment is exceeding broad.</p>
         `,
-    '199-mem': `
+    '119-mem': `
         <p><span class="verse-number">97</span> O how love I thy law! it is my meditation all the day.</p>
 		<p><span class="verse-number">98</span> Thou through thy commandments hast made me wiser than mine enemies: for they are ever with me.</p>
 		<p><span class="verse-number">99</span> I have more understanding than all my teachers: for thy testimonies are my meditation.</p>
@@ -2389,7 +2389,7 @@ const psalms = {
 		<p><span class="verse-number">103</span> How sweet are thy words unto my taste! yea, sweeter than honey to my mouth!</p>
 		<p><span class="verse-number">104</span> Through thy precepts I get understanding: therefore I hate every false way.</p>
         `,
-    '199-nun': `
+    '119-nun': `
         <p><span class="verse-number">105</span> Thy word is a lamp unto my feet, and a light unto my path.</p>
 		<p><span class="verse-number">106</span> I have sworn, and I will perform it, that I will keep thy righteous judgments.</p>
 		<p><span class="verse-number">107</span> I am afflicted very much: quicken me, O Lord, according unto thy word.</p>
@@ -2399,7 +2399,7 @@ const psalms = {
 		<p><span class="verse-number">111</span> Thy testimonies have I taken as an heritage for ever: for they are the rejoicing of my heart.</p>
 		<p><span class="verse-number">112</span> I have inclined mine heart to perform thy statutes alway, even unto the end.</p>
         `,
-    '199-samech': `
+    '119-samech': `
         <p><span class="verse-number">113</span> I hate vain thoughts: but thy law do I love.</p>
 		<p><span class="verse-number">114</span> Thou art my hiding place and my shield: I hope in thy word.</p>
 		<p><span class="verse-number">115</span> Depart from me, ye evildoers: for I will keep the commandments of my God.</p>
@@ -2409,7 +2409,7 @@ const psalms = {
 		<p><span class="verse-number">119</span> Thou puttest away all the wicked of the earth like dross: therefore I love thy testimonies.</p>
 		<p><span class="verse-number">120</span> My flesh trembleth for fear of thee; and I am afraid of thy judgments.</p>
         `,
-    '199-ain': `
+    '119-ain': `
         <p><span class="verse-number">121</span> I have done judgment and justice: leave me not to mine oppressors.</p>
 		<p><span class="verse-number">122</span> Be surety for thy servant for good: let not the proud oppress me.</p>
 		<p><span class="verse-number">123</span> Mine eyes fail for thy salvation, and for the word of thy righteousness.</p>
@@ -2419,7 +2419,7 @@ const psalms = {
 		<p><span class="verse-number">127</span> Therefore I love thy commandments above gold; yea, above fine gold.</p>
 		<p><span class="verse-number">128</span> Therefore I esteem all thy precepts concerning all things to be right; and I hate every false way.</p>
         `,
-    '199-pe': `
+    '119-pe': `
         <p><span class="verse-number">129</span> Thy testimonies are wonderful: therefore doth my soul keep them.</p>
 		<p><span class="verse-number">130</span> The entrance of thy words giveth light; it giveth understanding unto the simple.</p>
 		<p><span class="verse-number">131</span> I opened my mouth, and panted: for I longed for thy commandments.</p>
@@ -2429,7 +2429,7 @@ const psalms = {
 		<p><span class="verse-number">135</span> Make thy face to shine upon thy servant; and teach me thy statutes.</p>
 		<p><span class="verse-number">136</span> Rivers of waters run down mine eyes, because they keep not thy law.</p>
         `,
-    '199-tzaddi': `
+    '119-tzaddi': `
         <p><span class="verse-number">137</span> Righteous art thou, O Lord, and upright are thy judgments.</p>
 		<p><span class="verse-number">138</span> Thy testimonies that thou hast commanded are righteous and very faithful.</p>
 		<p><span class="verse-number">139</span> My zeal hath consumed me, because mine enemies have forgotten thy words.</p>
@@ -2439,7 +2439,7 @@ const psalms = {
 		<p><span class="verse-number">143</span> Trouble and anguish have taken hold on me: yet thy commandments are my delights.</p>
 		<p><span class="verse-number">144</span> The righteousness of thy testimonies is everlasting: give me understanding, and I shall live.</p>
         `,
-    '199-koph': `
+    '119-koph': `
         <p><span class="verse-number">145</span> I cried with my whole heart; hear me, O Lord: I will keep thy statutes.</p>
 		<p><span class="verse-number">146</span> I cried unto thee; save me, and I shall keep thy testimonies.</p>
 		<p><span class="verse-number">147</span> I prevented the dawning of the morning, and cried: I hoped in thy word.</p>
@@ -2449,7 +2449,7 @@ const psalms = {
 		<p><span class="verse-number">151</span> Thou art near, O Lord; and all thy commandments are truth.</p>
 		<p><span class="verse-number">152</span> Concerning thy testimonies, I have known of old that thou hast founded them for ever.</p>
         `,
-    '199-resh': `
+    '119-resh': `
         <p><span class="verse-number">153</span> Consider mine affliction, and deliver me: for I do not forget thy law.</p>
 		<p><span class="verse-number">154</span> Plead my cause, and deliver me: quicken me according to thy word.</p>
 		<p><span class="verse-number">155</span> Salvation is far from the wicked: for they seek not thy statutes.</p>
@@ -2459,7 +2459,7 @@ const psalms = {
 		<p><span class="verse-number">159</span> Consider how I love thy precepts: quicken me, O Lord, according to thy lovingkindness.</p>
 		<p><span class="verse-number">160</span> Thy word is true from the beginning: and every one of thy righteous judgments endureth for ever.</p>
         `,
-    '199-schin': `
+    '119-schin': `
         <p><span class="verse-number">161</span> Princes have persecuted me without a cause: but my heart standeth in awe of thy word.</p>
 		<p><span class="verse-number">162</span> I rejoice at thy word, as one that findeth great spoil.</p>
 		<p><span class="verse-number">163</span> I hate and abhor lying: but thy law do I love.</p>
@@ -2469,7 +2469,7 @@ const psalms = {
 		<p><span class="verse-number">167</span> My soul hath kept thy testimonies; and I love them exceedingly.</p>
 		<p><span class="verse-number">168</span> I have kept thy precepts and thy testimonies: for all my ways are before thee.</p>
         `,
-    '199-tau': `
+    '119-tau': `
         <p><span class="verse-number">169</span> Let my cry come near before thee, O Lord: give me understanding according to thy word.</p>
 		<p><span class="verse-number">170</span> Let my supplication come before thee: deliver me according to thy word.</p>
 		<p><span class="verse-number">171</span> My lips shall utter praise, when thou hast taught me thy statutes.</p>
