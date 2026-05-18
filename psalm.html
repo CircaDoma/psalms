@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Selah - Psalm</title>
+</head>
+<body>
+  <main>
+    <div class="home-link">
+      <a href="index.html" class="home">
+        <div class="container">
+          <img src="assets/site/selah-logo.svg" alt="Selah logo">
+          <span>Psalms and Meditations</span>
+        </div>
+      </a>
+    </div>
+    <div class="section hero">
+      <div class="container">
+        <img src="assets/psalms/55.png" alt="Psalm graphic" class="psalm-graphic">
+        <div class="psalmNumber">55</div>
+      </div>
+    </div>
+    <div class="section psalmContent">
+      <div class="container"></div>
+    </div>
+    <div class="footer section">
+      <a href="https://www.kalebfarar.com">
+        <img src="assets/site/circa-logo.svg" alt="Circa logo">
+      </a>
+      <div class="divider">© CIRCA TEXA</div>
+    </div>
+  </main>
+  <script src="psalms.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const num = parseInt(params.get('psalm'), 10);
+
+      const numEl = document.querySelector('.psalmNumber');
+      if (numEl) numEl.textContent = num;
+
+      const imgEl = document.querySelector('.psalm-graphic');
+      if (imgEl) imgEl.src = `assets/psalms/${num}.png`;
+
+      document.title = `Selah - Psalm ${num}`;
+
+      const contentEl = document.querySelector('.psalmContent .container');
+      if (contentEl && psalms[num] !== undefined) {
+        contentEl.innerHTML = psalms[num];
+      } else if (contentEl) {
+        contentEl.innerHTML = `<p>Psalm ${num} not found.</p>`;
+      }
+    })();
+  </script>
+</body>
+</html>

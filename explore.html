@@ -48,7 +48,7 @@
         for (let column = 0; column < 19; column++) {
             const psalm = psalmOrder[index++];
             const a = document.createElement('a');
-            a.href = `psalm-${psalm}.html`;
+            a.href = `psalm.html?psalm=${psalm}`;
             a.className = 'psalm-link';
             a.textContent = psalm;
 
